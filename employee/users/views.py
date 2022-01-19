@@ -15,6 +15,6 @@ def login_view(request):
             login(request, user)
             return redirect('registro/')
         else:
-            return render(request, 'users/login.html', {'error': 'Invalid username and password'})
+            return render(request, 'users/login.html', {'error': 'Usuario y contraseña incorrectos'})
 
     return render(request, 'users/login.html')
