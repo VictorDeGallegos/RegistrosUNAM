@@ -27,7 +27,8 @@ class Migration(migrations.Migration):
                  primary_key=True, serialize=False, verbose_name='ID')),
                 ('nombre_completo', models.CharField(max_length=100)),
                 ('CURP', models.CharField(max_length=18)),
-                ('sueldo', models.CharField(max_length=9)),
+                ('direccion', models.CharField(max_length=200)),
+                ('sueldo', models.CharField(max_length=5)),
                 ('numero_de_empleado', models.CharField(max_length=10)),
                 ('position', models.ForeignKey(
                     on_delete=django.db.models.deletion.CASCADE, to='employeeregister.position')),

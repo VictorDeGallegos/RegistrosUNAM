@@ -13,7 +13,8 @@ class position(models.Model):
 class employee(models.Model):
     nombre_completo = models.CharField(max_length=100)
     CURP = models.CharField(max_length=18)
-    sueldo = models.CharField(max_length=9)
+    direccion = models.CharField(max_length=200)
+    sueldo = models.CharField(max_length=5)
     numero_de_empleado = models.CharField(max_length=10)
     position = models.ForeignKey(position, on_delete=models.CASCADE)
 
