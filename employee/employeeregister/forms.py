@@ -7,10 +7,10 @@ class employeeForm(forms.ModelForm):
 
     class Meta:
         model = employee
-        fields = ("NombreCompleto", "CURP",
+        fields = ("nombre_completo", "CURP",
                   "numero_de_empleado", "sueldo", "position")
         widgets = {
-            'NombreCompleto': forms.TextInput(attrs={'class': 'form-control', 'id': 'NombreCompleto', 'placeholder': 'Nombre Completo'}),
+            'nombre_completo': forms.TextInput(attrs={'class': 'form-control', 'id': 'nombre_completo', 'placeholder': 'Nombre Completo'}),
             'CURP': forms.TextInput(attrs={'class': 'form-control', 'id': 'CURP', 'placeholder': 'CURP'}),
             'numero_de_empleado': forms.TextInput(attrs={'class': 'form-control', 'id': 'mobNo', 'placeholder': '# de trabajador'}),
             'sueldo': forms.TextInput(attrs={'class': 'form-control', 'id': 'sueldo', 'placeholder': '3000 ejemplo'}),

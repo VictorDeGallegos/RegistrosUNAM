@@ -11,11 +11,11 @@ class position(models.Model):
 
 
 class employee(models.Model):
-    NombreCompleto = models.CharField(max_length=100)
+    nombre_completo = models.CharField(max_length=100)
     CURP = models.CharField(max_length=18)
     sueldo = models.CharField(max_length=9)
     numero_de_empleado = models.CharField(max_length=10)
     position = models.ForeignKey(position, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.NombreCompleto
+        return self.nombre_completo
