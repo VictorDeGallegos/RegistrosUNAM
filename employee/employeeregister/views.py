@@ -21,7 +21,7 @@ def employee_form(request):
                 NombreCompleto=request.POST['NombreCompleto'],
                 CURP=request.POST['CURP'],
                 sueldo=request.POST['sueldo'],
-                mobile_no=request.POST['mobile_no'],
+                numero_de_empleado=request.POST['numero_de_empleado'],
                 position=form.cleaned_data['position']
 
             )
