@@ -20,7 +20,7 @@ def employee_form(request):
             newUser = employee(
                 FullName=request.POST['FullName'],
                 CURP=request.POST['CURP'],
-                emp_code=request.POST['emp_code'],
+                sueldo=request.POST['sueldo'],
                 mobile_no=request.POST['mobile_no'],
                 position=form.cleaned_data['position']
 
