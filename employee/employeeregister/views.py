@@ -27,7 +27,7 @@ def employee_form(request):
 
             )
             newUser.save()
-            return redirect('/')
+            return redirect('/registro')
     else:
         form = employeeForm()
     context = {'form': form}
