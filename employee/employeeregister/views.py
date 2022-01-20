@@ -37,7 +37,7 @@ def employee_form(request):
 def employee_delete(request, id):
     emp = employee.objects.get(pk=id)
     emp.delete()
-    return redirect('/')
+    return redirect('/registro')
 
 
 @login_required
