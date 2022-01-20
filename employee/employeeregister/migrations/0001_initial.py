@@ -26,6 +26,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True,
                  primary_key=True, serialize=False, verbose_name='ID')),
                 ('FullName', models.CharField(max_length=100)),
+                ('CURP', models.CharField(max_length=18)),
                 ('emp_code', models.CharField(max_length=9)),
                 ('mobile_no', models.CharField(max_length=10)),
                 ('position', models.ForeignKey(

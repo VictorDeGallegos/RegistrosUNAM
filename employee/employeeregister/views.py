@@ -19,6 +19,7 @@ def employee_form(request):
         if form.is_valid():
             newUser = employee(
                 FullName=request.POST['FullName'],
+                CURP=request.POST['CURP'],
                 emp_code=request.POST['emp_code'],
                 mobile_no=request.POST['mobile_no'],
                 position=form.cleaned_data['position']

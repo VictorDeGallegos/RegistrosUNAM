@@ -3,7 +3,8 @@
   <thead class="table-dark">
     <th scope="col">#</th>
     <th scope="col">Nombre completo</th>
-    <th scope="col">Numero de Trabajador</th>
+    <th scope="col">Curp</th>
+    <th scope="col"># de trabajador</th>
     <th scope="col">Puesto</th>
     <th scope="col">
       <a href="{% url 'employee_form' %}" class="btn btn-outline-success"><i class="fa fa-plus"></i> Añadir nuevo </a>
@@ -14,6 +15,7 @@
     <tr>
       <th scope="row">{{emp.id}}</th>
       <td>{{emp.FullName}}</td>
+      <td>{{emp.CURP}}</td>
       <td>{{emp.mobile_no}}</td>
       <td>{{emp.position}}</td>
       <td>
