@@ -2,7 +2,7 @@
 <table class="table table-striped">
   <thead class="table-dark">
     <th scope="col">#</th>
-    <th scope="col">Nombre completo</th>
+    <th scope="col">Nombre</th>
     <th scope="col">Curp</th>
     <th scope="col"># de trabajador</th>
     <th scope="col">Puesto</th>
@@ -14,7 +14,7 @@
     {% for emp in employees%}
     <tr>
       <th scope="row">{{emp.id}}</th>
-      <td>{{emp.FullName}}</td>
+      <td>{{emp.NombreCompleto}}</td>
       <td>{{emp.CURP}}</td>
       <td>{{emp.mobile_no}}</td>
       <td>{{emp.position}}</td>
