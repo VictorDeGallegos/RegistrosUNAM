@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MaxValueValidator
+from django.core.validators import RegexValidator
 
 # Create your models here.
 
@@ -16,6 +18,8 @@ class employee(models.Model):
     direccion = models.CharField(max_length=200)
     sueldo = models.CharField(max_length=5)
     numero_de_empleado = models.CharField(max_length=10)
+    antiguedad = models.CharField(max_length=2, validators=[
+                                  RegexValidator(r'^\d{1,10}$')])
     position = models.ForeignKey(position, on_delete=models.CASCADE)
 
     def __str__(self):

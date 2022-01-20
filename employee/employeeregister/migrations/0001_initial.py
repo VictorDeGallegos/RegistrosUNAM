@@ -2,6 +2,8 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
+from django.core.validators import MaxValueValidator
+from django.core.validators import RegexValidator
 
 
 class Migration(migrations.Migration):
@@ -30,6 +32,8 @@ class Migration(migrations.Migration):
                 ('direccion', models.CharField(max_length=200)),
                 ('sueldo', models.CharField(max_length=5)),
                 ('numero_de_empleado', models.CharField(max_length=10)),
+                ('antiguedad', models.CharField(max_length=2,
+                 validators=[RegexValidator(r'^\d{1,10}$')])),
                 ('position', models.ForeignKey(
                     on_delete=django.db.models.deletion.CASCADE, to='employeeregister.position')),
             ],
