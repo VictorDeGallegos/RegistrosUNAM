@@ -2,7 +2,7 @@
 <h2>Actualización de datos de Personal</h2>
 <form action="" method="POST">
   {% csrf_token %} {{form.as_p}}
-  <input type="submit" class="btn btn-success" value="Confirm" />
-  <a href="{% url 'employee_list' %}" class="btn btn-info">Back to list</a>
+  <input type="submit" class="btn btn-success" value="Confirmar" />
+  <a href="{% url 'employee_list' %}" class="btn btn-info">Volver a la lista</a>
 </form>
 {% endblock %}
