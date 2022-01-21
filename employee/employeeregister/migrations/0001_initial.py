@@ -34,6 +34,7 @@ class Migration(migrations.Migration):
                 ('numero_de_empleado', models.CharField(max_length=10)),
                 ('años_de_antiguedad', models.CharField(max_length=2,
                  validators=[RegexValidator(r'^\d{1,10}$')])),
+                ('email', models.EmailField(max_length=200)),
                 ('position', models.ForeignKey(
                     on_delete=django.db.models.deletion.CASCADE, to='employeeregister.position')),
             ],

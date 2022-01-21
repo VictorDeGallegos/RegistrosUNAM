@@ -24,6 +24,7 @@ def employee_form(request):
                 sueldo=request.POST['sueldo'],
                 numero_de_empleado=request.POST['numero_de_empleado'],
                 años_de_antiguedad=request.POST['años_de_antiguedad'],
+                email=request.POST['email'],
                 position=form.cleaned_data['position']
 
             )
