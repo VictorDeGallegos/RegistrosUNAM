@@ -16,7 +16,8 @@ class employee(models.Model):
     nombre_completo = models.CharField(max_length=100)
     CURP = models.CharField(max_length=18)
     direccion = models.CharField(max_length=200)
-    sueldo = models.CharField(max_length=5)
+    sueldo = models.CharField(max_length=5, validators=[
+        RegexValidator(r'^\d{1,10}$')])
     numero_de_empleado = models.CharField(max_length=10)
     años_de_antiguedad = models.CharField(max_length=2, validators=[
         RegexValidator(r'^\d{1,10}$')])
