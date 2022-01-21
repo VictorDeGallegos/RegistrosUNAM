@@ -18,7 +18,8 @@ class employee(models.Model):
     direccion = models.CharField(max_length=200)
     sueldo = models.CharField(max_length=5, validators=[
         RegexValidator(r'^\d{1,10}$')])
-    numero_de_empleado = models.CharField(max_length=10)
+    numero_de_empleado = models.CharField(max_length=10, validators=[
+        RegexValidator(r'^\d{1,10}$')])
     años_de_antiguedad = models.CharField(max_length=2, validators=[
         RegexValidator(r'^\d{1,10}$')])
     email = models.EmailField(max_length=200)
