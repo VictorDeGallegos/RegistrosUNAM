@@ -15,7 +15,7 @@ class position(models.Model):
 class employee(models.Model):
     nombre_completo = models.CharField(max_length=100, validators=[
         RegexValidator(r'^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$',
-                       message='Solo letras para el NOMBRE COMPLETO')])
+                       message='Solo letras y al menos 4 letras para el NOMBRE COMPLETO')])
     CURP = models.CharField(max_length=18, validators=[
         RegexValidator(r'^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$',
                        message='Formato de CURP incorrecto')])
