@@ -1,11 +1,11 @@
 {% extends 'users/base.html' %} {% block title %}Login{% endblock title %} {% block container %} {% load static %}
 <div class="full-h row d-flex justify-content-center align-items-center">
   <div class="col-md-6 order-2 order-md-1">
-    <img class="img-fluid" src="{% static 'img/pontevacuna.png' %}" alt="" />
+    <img class="img-fluid" src="{% static 'img/pontevacuna.png' %}" alt="#PontePuma" />
   </div>
   <div class="col-md-6 col-sm-12 d-flex flex-column align-items-center order-1 order-md-2 my-5">
     <div class="card w-card p-5 shadow-lg align-items-center">
-      <img class="my-5" src="{% static 'img/dgp.png' %}" alt="" width="150px" />
+      <img class="my-5" src="{% static 'img/dgp.png' %}" alt="" width="160px" />
       {% if error %}
       <div class="w-75 alert alert-danger alert-dismissible fade show" role="alert">
         <strong>😔</strong> {{ error }}

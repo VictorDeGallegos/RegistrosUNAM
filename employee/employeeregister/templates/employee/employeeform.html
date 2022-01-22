@@ -2,34 +2,82 @@
 <form action="" method="post">
   {% csrf_token %}
   <div class="form-group">
-    <label for="nombreCompleto">Nombre completo</label>
-    {{form.nombre_completo}}
+    <label for="nombre_completo">Nombre completo</label>
+    <input
+      class="form-control {% if form.nombre_completo.errors %} is-invalid {% endif %}"
+      type="text"
+      name="nombre_completo"
+      placeholder="Ejemplo: Victor Hugo Gallegos Mota"
+      maxlength="100"
+      value="{% if form.nombre_completo.errors %}{{ form.nombre_completo.value }}{%else%}{{ employee.nombre_completo }}{%endif%}"
+    />
+    <div class="invalid-feedback">{% for error in form.nombre_completo.errors %} {{error}} {%endfor%}</div>
   </div>
   <div class="form-group">
     <label for="CURP">CURP</label>
-    {{form.CURP}}
+    <input
+      class="form-control {% if form.CURP.errors %} is-invalid {% endif %}"
+      type="text"
+      name="CURP"
+      placeholder="Ejemplo: GAMV991024HDFLTC01"
+      maxlength="18"
+      value="{% if form.CURP.errors %}{{ form.CURP.value }}{%else%}{{ employee.CURP }}{%endif%}"
+    />
+    <div class="invalid-feedback">{% for error in form.CURP.errors %} {{error}} {%endfor%}</div>
   </div>
   <div class="form-group">
     <label for="direccion">Direccion</label>
     {{form.direccion}}
   </div>
   <div class="form-group">
-    <label for="mobNo">Numero de empleado</label>
-    {{form.numero_de_empleado}}
+    <label for="numero_de_empleado">Numero de empleado</label>
+    <input
+      class="form-control {% if form.numero_de_empleado.errors %} is-invalid {% endif %}"
+      type="text"
+      name="numero_de_empleado"
+      placeholder="Ejemplo: 316160456"
+      maxlength="10"
+      value="{% if form.numero_de_empleado.errors %}{{ form.numero_de_empleado.value }}{%else%}{{ employee.numero_de_empleado }}{%endif%}"
+    />
+    <div class="invalid-feedback">{% for error in form.numero_de_empleado.errors %} {{error}} {%endfor%}</div>
   </div>
   <div class="form-group">
     <label for="años_de_antiguedad">Años de antiguedad</label>
-    {{form.años_de_antiguedad}}
+    <input
+      class="form-control {% if form.años_de_antiguedad.errors %} is-invalid {% endif %}"
+      type="text"
+      name="años_de_antiguedad"
+      placeholder="Ejemplo: 3"
+      maxlength="2"
+      value="{% if form.años_de_antiguedad.errors %}{{ form.años_de_antiguedad.value }}{%else%}{{ employee.años_de_antiguedad }}{%endif%}"
+    />
+    <div class="invalid-feedback">{% for error in form.años_de_antiguedad.errors %} {{error}} {%endfor%}</div>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    {{form.email}}
+    <input
+      class="form-control {% if form.email.errors %} is-invalid {% endif %}"
+      type="text"
+      name="email"
+      placeholder="Ejemplo: admin@ciencias.unam.mx"
+      maxlength="200"
+      value="{% if form.email.errors %}{{ form.email.value }}{%else%}{{ employee.email }}{%endif%}"
+    />
+    <div class="invalid-feedback">{% for error in form.email.errors %} {{error}} {%endfor%}</div>
   </div>
   <div class="row">
     <div class="col-md-4">
       <div class="form-group">
         <label for="sueldo">Sueldo por mes</label>
-        {{form.sueldo}}
+        <input
+          class="form-control {% if form.sueldo.errors %} is-invalid {% endif %}"
+          type="text"
+          name="sueldo"
+          placeholder="Ejemplo: 3000"
+          maxlength="5"
+          value="{% if form.sueldo.errors %}{{ form.sueldo.value }}{%else%}{{ employee.sueldo }}{%endif%}"
+        />
+        <div class="invalid-feedback">{% for error in form.sueldo.errors %} {{error}} {%endfor%}</div>
       </div>
     </div>
     <div class="col-md-8">
