@@ -15,12 +15,20 @@
     </style>
   </head>
   <body>
+    {% load static %}
+    <style>
+      h1,
+      img {
+        display: inline-block;
+      }
+    </style>
     <div class="container">
       <div class="col-md-10 offset-md-1 mt-5">
         <div class="jumbotron">
-          <h1 class="display-4 d-block p-2 bg-primary text-white">Registro de Empleados UNAM</h1>
-          <p class="lead font-italic d-block p-2 bg-secondary text-white">Dirección General de Personal</p>
-          <a href="{% url 'logout' %}" class="btn btn-outline-danger"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
+          <img style="display: inline-block" src="{% static 'img/unamlogo.png' %}" align="right" alt="" width="74px" />
+          <h1 class="display-4 d-block p-2 text-center bg-transparent" style="color: #1d3d75">Registro de Empleados UNAM</h1>
+          <p class="lead font-italic d-block p-2 bg-primary text-white text-center">Dirección General de Personal</p>
+          <a href="{% url 'logout' %}" align="center" class="btn btn-outline-danger"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
           <p></p>
           {% block content%} {% endblock %}
         </div>
