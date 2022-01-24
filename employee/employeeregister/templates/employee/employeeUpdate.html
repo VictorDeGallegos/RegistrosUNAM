@@ -1,7 +1,70 @@
 {% extends 'employee/base.html' %} {% block content %}
 <h2>Actualización de datos de Personal</h2>
 <form action="" method="POST">
-  {% csrf_token %} {{form.as_p}}
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="direccion">Nombre Completo</label>
+    {{form.nombre_completo}}
+  </div>
+  <div class="form-group">
+    <label for="CURP">CURP</label>
+    {{form.CURP}}
+  </div>
+  <div class="form-group">
+    <label for="direccion">direccion</label>
+    {{form.direccion}}
+  </div>
+  <div class="form-group">
+    <label for="numero_de_empleado">Numero de empleado</label>
+    {{form.numero_de_empleado}}
+  </div>
+  <div class="form-group">
+    <label for="años_de_antiguedad">Antiguedad</label>
+    {{form.años_de_antiguedad}}
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    {{form.email}}
+  </div>
+  <div class="form-group">
+    <label for="sueldo">Sueldo por mes</label>
+    {{form.sueldo}}
+  </div>
+  <div class="form-group">
+    <label for="position">Puesto Administrativo</label>
+    {{form.position}}
+  </div>
+  {%if form.pregunta1.value%}
+  <div class="form-group">
+    <label for="pregunta1">Pregunta1</label>
+    {{form.pregunta1}}
+  </div>
+  {%endif%} {%if form.pregunta2.value%}
+  <div class="form-group">
+    <label for="pregunta2">Pregunta2</label>
+    {{form.pregunta2}}
+  </div>
+  {%endif%} {%if form.pregunta3.value%}
+  <div class="form-group">
+    <label for="pregunta3">Pregunta3</label>
+    {{form.pregunta3}}
+  </div>
+  {%endif%} {%if form.pregunta4.value%}
+  <div class="form-group">
+    <label for="pregunta4">Pregunta4</label>
+    {{form.pregunta4}}
+  </div>
+  {%endif%} {%if form.pregunta5.value%}
+  <div class="form-group">
+    <label for="pregunta5">Pregunta5</label>
+    {{form.pregunta5}}
+  </div>
+  {%endif%} {%if form.pregunta6.value%}
+  <div class="form-group">
+    <label for="pregunta6">Pregunta6</label>
+    {{form.pregunta6}}
+  </div>
+  {%endif%}
   <input type="submit" class="btn btn-success" value="Confirmar" />
   <a href="{% url 'employee_list' %}" class="btn btn-info">Volver a la lista</a>
 </form>

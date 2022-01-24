@@ -87,6 +87,83 @@
       </div>
     </div>
   </div>
+
+  <!-- Ayudante -->
+  <div id="Preguntas" hidden="true">
+    <div class="form-group">
+      <label id="Pregunta1" for="pregunta1">Pregunta1</label>
+      <input
+        class="form-control pregunta1 {% if form.pregunta1.errors %} is-invalid {% endif %}"
+        type="text"
+        name="pregunta1"
+        placeholder="Ejemplo: "
+        maxlength="200"
+        value="{% if form.pregunta1.errors %}{{ form.pregunta1.value }}{%else%}{{ employee.pregunta1 }}{%endif%}"
+      />
+      <div class="invalid-feedback">{% for error in form.pregunta1.errors %} {{error}} {%endfor%}</div>
+    </div>
+    <div class="form-group">
+      <label id="Pregunta2" for="pregunta2">Pregunta2</label>
+      <input
+        class="form-control pregunta2 {% if form.pregunta2.errors %} is-invalid {% endif %}"
+        type="text"
+        name="pregunta2"
+        placeholder="Ejemplo: "
+        maxlength="200"
+        value="{% if form.pregunta2.errors %}{{ form.pregunta2.value }}{%else%}{{ employee.pregunta2 }}{%endif%}"
+      />
+      <div class="invalid-feedback">{% for error in form.pregunta1.errors %} {{error}} {%endfor%}</div>
+    </div>
+    <div class="form-group">
+      <label id="Pregunta3" for="pregunta3">Pregunta3</label>
+      <input
+        class="form-control pregunta3 {% if form.pregunta3.errors %} is-invalid {% endif %}"
+        type="text"
+        name="pregunta3"
+        placeholder="Ejemplo: "
+        maxlength="200"
+        value="{% if form.pregunta3.errors %}{{ form.pregunta3.value }}{%else%}{{ employee.pregunta3 }}{%endif%}"
+      />
+      <div class="invalid-feedback">{% for error in form.pregunta3.errors %} {{error}} {%endfor%}</div>
+    </div>
+    <div class="form-group">
+      <label id="Pregunta4" for="pregunta4">Pregunta4</label>
+      <input
+        class="form-control pregunta4 {% if form.pregunta4.errors %} is-invalid {% endif %}"
+        type="text"
+        name="pregunta4"
+        placeholder="Ejemplo: "
+        maxlength="200"
+        value="{% if form.pregunta4.errors %}{{ form.pregunta4.value }}{%else%}{{ employee.pregunta4 }}{%endif%}"
+      />
+      <div class="invalid-feedback">{% for error in form.pregunta1.errors %} {{error}} {%endfor%}</div>
+    </div>
+    <div class="form-group">
+      <label id="Pregunta5" for="pregunta5">Pregunta5</label>
+      <input
+        class="form-control pregunta5 {% if form.pregunta5.errors %} is-invalid {% endif %}"
+        type="text"
+        name="pregunta5"
+        placeholder="Ejemplo: "
+        maxlength="200"
+        value="{% if form.pregunta5.errors %}{{ form.pregunta5.value }}{%else%}{{ employee.pregunta5 }}{%endif%}"
+      />
+      <div class="invalid-feedback">{% for error in form.pregunta1.errors %} {{error}} {%endfor%}</div>
+    </div>
+    <div class="form-group">
+      <label id="Pregunta6" for="pregunta6">Pregunta6</label>
+      <input
+        class="form-control pregunta6 {% if form.pregunta6.errors %} is-invalid {% endif %}"
+        type="text"
+        name="pregunta6"
+        placeholder="Ejemplo: "
+        maxlength="200"
+        value="{% if form.pregunta6.errors %}{{ form.pregunta6.value }}{%else%}{{ employee.pregunta6 }}{%endif%}"
+      />
+      <div class="invalid-feedback">{% for error in form.pregunta6.errors %} {{error}} {%endfor%}</div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-md-8">
       <button type="submit" class="btn btn-success btn-lg btn-block"><i class="fa fa-database" aria-hidden="true"></i> Guardar</button>

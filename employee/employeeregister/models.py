@@ -29,8 +29,14 @@ class employee(models.Model):
     años_de_antiguedad = models.CharField(max_length=2, validators=[
         RegexValidator(r'^\d{1,10}$',
                        message='Solo numeros para indicar la ANTIGUEDAD')])
-    email = models.EmailField(max_length=200)
     position = models.ForeignKey(position, on_delete=models.CASCADE)
+    email = models.EmailField(max_length=200)
+    pregunta1 = models.CharField(max_length=200, null=True, blank=True)
+    pregunta2 = models.CharField(max_length=200, null=True, blank=True)
+    pregunta3 = models.CharField(max_length=200, null=True, blank=True)
+    pregunta4 = models.CharField(max_length=200, null=True, blank=True)
+    pregunta5 = models.CharField(max_length=200, null=True, blank=True)
+    pregunta6 = models.CharField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.nombre_completo
