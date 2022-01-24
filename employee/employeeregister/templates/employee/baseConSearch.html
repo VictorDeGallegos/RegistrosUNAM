@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registro de Empleados</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous" />
+    <style>
+      .edit {
+        padding-right: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    {% load static %}
+    <style>
+      .jumbotron {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        background-color: #e9ecef;
+        border-radius: 1.5rem;
+      }
+      body {
+        background: #ffffff;
+      }
+      input[type='submit'] {
+        padding: 5px 15px;
+        border: 2px solid #007bff;
+        border-radius: 25px;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 25px;
+      }
+      input[type='text'] {
+        border: 2px solid #007bff;
+        border-radius: 25px;
+      }
+
+      input[type='text']:focus {
+        box-shadow: inset 0 0 0 0px #fff, 0 0 0 1px #fff, 3px -3px 20px #007bff, -3px 3px 20px #007bff;
+      }
+      input[type='submit']:hover {
+        box-shadow: inset 0 0 0 0px #fff, 0 0 0 1px #fff, 3px -3px 20px #007bff, -3px 3px 20px #007bff;
+      }
+    </style>
+    <div class="container" style="margin: 0 auto; text-align: center">
+      <div class="col-md-10 offset-md-1 mt-5">
+        <div class="jumbotron">
+          <img style="display: inline-block" src="{% static 'img/unamlogo.png' %}" align="right" alt="" width="74px" />
+          <h1 class="display-4 d-block p-2 text-center bg-transparent" style="color: #1d3d75">Registro de Empleados UNAM</h1>
+          <p class="lead font-italic d-block p-2 bg-primary text-white text-center">Dirección General de Personal</p>
+          <a href="{% url 'logout' %}" class="btn btn-outline-danger btn-sm"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
+          <form name="f1" action="" onSubmit="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value);return false">
+            <p></p>
+            <input
+              style="display: inline-block"
+              class="text-center"
+              type="text"
+              name="t1"
+              placeholder="Buscar un empleado por su CURP"
+              size="90"
+            />
+            <input style="display: inline-block" type="submit" name="b1" value="Buscar" />
+          </form>
+          <head>
+            <script language="JavaScript">
+              var TRange = null;
+              function findString(str) {
+                if (parseInt(navigator.appVersion) < 4) return;
+                var strFound;
+                if (window.find) {
+                  // CODE FOR BROWSERS THAT SUPPORT window.find
+                  strFound = self.find(str);
+                  if (strFound && self.getSelection && !self.getSelection().anchorNode) {
+                    strFound = self.find(str);
+                  }
+                  if (!strFound) {
+                    strFound = self.find(str, 0, 1);
+                    while (self.find(str, 0, 1)) continue;
+                  }
+                } else if (navigator.appName.indexOf('Microsoft') != -1) {
+                  // EXPLORER-SPECIFIC CODE
+
+                  if (TRange != null) {
+                    TRange.collapse(false);
+                    strFound = TRange.findText(str);
+                    if (strFound) TRange.select();
+                  }
+                  if (TRange == null || strFound == 0) {
+                    TRange = self.document.body.createTextRange();
+                    strFound = TRange.findText(str);
+                    if (strFound) TRange.select();
+                  }
+                } else if (navigator.appName == 'Opera') {
+                  alert('Opera browsers not supported, sorry...');
+                  return;
+                }
+                if (!strFound) alert("CURP '" + str + "' no encontrado");
+                return;
+              }
+              //-->
+            </script>
+          </head>
+
+          <p></p>
+          {% block content%} {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function validarPersonal() {
+        const Pregunta1 = document.getElementById('Pregunta1');
+        const Pregunta2 = document.getElementById('Pregunta2');
+        const Pregunta3 = document.getElementById('Pregunta3');
+        const Pregunta4 = document.getElementById('Pregunta4');
+        const Pregunta5 = document.getElementById('Pregunta5');
+        const Pregunta6 = document.getElementById('Pregunta6');
+        const Value = document.getElementById('exampleFormControlSelect1').value;
+        const Preguntas = document.getElementById('Preguntas');
+        if (Value === '1') {
+          Preguntas.hidden = false;
+          Pregunta1.innerText = 'Lugar de trabajo Administrativo';
+          Pregunta2.innerText = 'Puesto Administrativo';
+          Pregunta3.innerText = 'Horario Administrativo';
+          Pregunta4.innerText = 'Pregunta4 Administrativo';
+          Pregunta5.innerText = 'Pregunta5 Administrativo';
+          Pregunta6.innerText = 'Pregunta6 Administrativo';
+        } else if (Value === '2') {
+          Preguntas.hidden = false;
+          Pregunta1.innerText = 'Pregunta1 Ayudante';
+          Pregunta2.innerText = 'Pregunta2 Ayudante';
+          Pregunta3.innerText = 'Pregunta3 Ayudante';
+          Pregunta4.innerText = 'Pregunta4 Ayudante';
+          Pregunta5.innerText = 'Pregunta5 Ayudante';
+          Pregunta6.innerText = 'Pregunta6 Ayudante';
+        } else if (Value === '3') {
+          Preguntas.hidden = false;
+          Pregunta1.innerText = 'Pregunta1 Profesor';
+          Pregunta2.innerText = 'Pregunta2 Profesor';
+          Pregunta3.innerText = 'Pregunta3 Profesor';
+          Pregunta4.innerText = 'Pregunta4 Profesor';
+          Pregunta5.innerText = 'Pregunta5 Profesor';
+          Pregunta6.innerText = 'Pregunta6 Profesor';
+        } else if (Value === '4') {
+          Preguntas.hidden = false;
+          Pregunta1.innerText = 'Pregunta1 Investigador';
+          Pregunta2.innerText = 'Pregunta2 Investigador';
+          Pregunta3.innerText = 'Pregunta3 Investigador';
+          Pregunta4.innerText = 'Pregunta4 Investigador';
+          Pregunta5.innerText = 'Pregunta5 Investigador';
+          Pregunta6.innerText = 'Pregunta6 Investigador';
+        }
+      }
+      function Actualizar1() {
+        const value = document.getElementsByClassName('pregunta1');
+        let final = -1;
+        for (let index = 0; index < value.length; index++) {
+          let element = value[index];
+          if (element.value !== '') {
+            final = element.value;
+            break;
+          }
+        }
+        for (let index = 0; index < value.length; index++) {
+          value[index].value = final;
+        }
+      }
+      function Actualizar2() {
+        const value = document.getElementsByClassName('pregunta1');
+        let final = -1;
+        for (let index = 0; index < value.length; index++) {
+          let element = value[index];
+          if (element.value !== '') {
+            final = element.value;
+            break;
+          }
+        }
+        for (let index = 0; index < value.length; index++) {
+          value[index].value = final;
+        }
+      }
+      function Actualizar2() {
+        const value = document.getElementsByClassName('pregunta2');
+        let final = -1;
+        for (let index = 0; index < value.length; index++) {
+          let element = value[index];
+          if (element.value !== '') {
+            final = element.value;
+            break;
+          }
+        }
+        for (let index = 0; index < value.length; index++) {
+          value[index].value = final;
+        }
+      }
+      function Actualizar3() {
+        const value = document.getElementsByClassName('pregunta3');
+        let final = -1;
+        for (let index = 0; index < value.length; index++) {
+          let element = value[index];
+          if (element.value !== '') {
+            final = element.value;
+            break;
+          }
+        }
+        for (let index = 0; index < value.length; index++) {
+          value[index].value = final;
+        }
+      }
+      function Actualizar4() {
+        const value = document.getElementsByClassName('pregunta4');
+        let final = -1;
+        for (let index = 0; index < value.length; index++) {
+          let element = value[index];
+          if (element.value !== '') {
+            final = element.value;
+            break;
+          }
+        }
+        for (let index = 0; index < value.length; index++) {
+          value[index].value = final;
+        }
+      }
+      function Actualizar5() {
+        const value = document.getElementsByClassName('pregunta5');
+        let final = -1;
+        for (let index = 0; index < value.length; index++) {
+          let element = value[index];
+          if (element.value !== '') {
+            final = element.value;
+            break;
+          }
+        }
+        for (let index = 0; index < value.length; index++) {
+          value[index].value = final;
+        }
+      }
+      function Actualizar6() {
+        const value = document.getElementsByClassName('pregunta6');
+        let final = -1;
+        for (let index = 0; index < value.length; index++) {
+          let element = value[index];
+          if (element.value !== '') {
+            final = element.value;
+            break;
+          }
+        }
+        for (let index = 0; index < value.length; index++) {
+          value[index].value = final;
+        }
+      }
+    </script>
+  </body>
+</html>
