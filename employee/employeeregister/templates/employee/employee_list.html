@@ -4,6 +4,7 @@
     <th scope="col">#</th>
     <th scope="col">Nombre</th>
     <th scope="col">Curp</th>
+    <th scope="col"># de trabajador</th>
     <th scope="col">Puesto</th>
     <th scope="col">
       <a href="{% url 'employee_form' %}" class="btn btn-outline-success"><i class="fa fa-plus"></i> Agregar empleado </a>
@@ -15,6 +16,7 @@
       <th scope="row">{{emp.id}}</th>
       <td>{{emp.nombre_completo}}</td>
       <td>{{emp.CURP}}</td>
+      <td>{{emp.numero_de_empleado}}</td>
       <td>{{emp.position}}</td>
       <td>
         <a href="{% url 'employee_update' emp.id %}"><i class="fa fa-pencil-square-o edit"></i></a>

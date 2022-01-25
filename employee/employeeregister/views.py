@@ -25,7 +25,13 @@ def employee_form(request):
                 numero_de_empleado=request.POST['numero_de_empleado'],
                 años_de_antiguedad=request.POST['años_de_antiguedad'],
                 email=request.POST['email'],
-                position=form.cleaned_data['position']
+                position=form.cleaned_data['position'],
+                pregunta1=request.POST['pregunta1'],
+                pregunta2=request.POST['pregunta2'],
+                pregunta3=request.POST['pregunta3'],
+                pregunta4=request.POST['pregunta4'],
+                pregunta5=request.POST['pregunta5'],
+                pregunta6=request.POST['pregunta6'],
 
             )
             newUser.save()

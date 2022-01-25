@@ -90,9 +90,10 @@
 
   <!-- Ayudante -->
   <div id="Preguntas" hidden="true">
-    <div class="form-group">
+    <div class="form-group" id="p1">
       <label id="Pregunta1" for="pregunta1">Pregunta1</label>
-      <select name="facultad" id="facultad">
+      {{form.pregunta1}}
+      <!-- <select name="facultad" id="facultad">
         <optgroup label="Facultades">
           <option value="FacultadArquitectura">Facultad de Arquitectura</option>
           <option value="FacultaArtes">Facultad de Artes y Diseño</option>
@@ -144,17 +145,18 @@
           <option value="CCHSUR">Colegio de Ciencias y Humanidades Plantel Sur"</option>
           <option value="CCHVALLEJO">Colegio de Ciencias y Humanidades Plantel Vallejo"</option>
         </optgroup>
-      </select>
+      </select> -->
     </div>
-    <div class="form-group">
+    <div class="form-group" id="p2">
       <label id="Pregunta2" for="pregunta2">Pregunta2</label>
-      <select name="nivel" id="nivel">
+      {{form.pregunta2}}
+      <!-- <select name="nivel" id="nivel">
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
-      </select>
+      </select> -->
     </div>
-    <div class="form-group">
+    <div class="form-group" id="p3">
       <label id="Pregunta3" for="pregunta3">Pregunta3</label>
       <input
         class="form-control pregunta3 {% if form.pregunta3.errors %} is-invalid {% endif %}"
@@ -166,7 +168,7 @@
       />
       <div class="invalid-feedback">{% for error in form.pregunta3.errors %} {{error}} {%endfor%}</div>
     </div>
-    <div class="form-group">
+    <div class="form-group" id="p4">
       <label id="Pregunta4" for="pregunta4">Pregunta4</label>
       <input
         class="form-control pregunta4 {% if form.pregunta4.errors %} is-invalid {% endif %}"
@@ -178,7 +180,7 @@
       />
       <div class="invalid-feedback">{% for error in form.pregunta4.errors %} {{error}} {%endfor%}</div>
     </div>
-    <div class="form-group">
+    <div class="form-group" id="p5">
       <label id="Pregunta5" for="pregunta5">Pregunta5</label>
       <input
         class="form-control pregunta5 {% if form.pregunta5.errors %} is-invalid {% endif %}"
@@ -190,7 +192,7 @@
       />
       <div class="invalid-feedback">{% for error in form.pregunta5.errors %} {{error}} {%endfor%}</div>
     </div>
-    <div class="form-group">
+    <div class="form-group" id="p6">
       <label id="Pregunta6" for="pregunta6">Pregunta6</label>
       <input
         class="form-control pregunta6 {% if form.pregunta6.errors %} is-invalid {% endif %}"

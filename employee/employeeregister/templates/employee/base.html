@@ -65,140 +65,66 @@
         const Pregunta4 = document.getElementById('Pregunta4');
         const Pregunta5 = document.getElementById('Pregunta5');
         const Pregunta6 = document.getElementById('Pregunta6');
+        const p1 = document.getElementById('p1');
+        const p2 = document.getElementById('p2');
+        const p3 = document.getElementById('p3');
+        const p4 = document.getElementById('p4');
+        const p5 = document.getElementById('p5');
+        const p6 = document.getElementById('p6');
         const Value = document.getElementById('exampleFormControlSelect1').value;
         const Preguntas = document.getElementById('Preguntas');
         if (Value === '1') {
           Preguntas.hidden = false;
           Pregunta1.innerText = 'Lugar de trabajo:';
+          p1.hidden = false;
           Pregunta2.innerText = 'Puesto:';
+          p2.hidden = false;
           Pregunta3.innerText = 'Horario:';
-          Pregunta4.innerText = 'Pregunta4 Administrativo';
-          Pregunta5.innerText = 'Pregunta5 Administrativo';
-          Pregunta6.innerText = 'Pregunta6 Administrativo';
+          p3.hidden = false;
+          p4.hidden = true;
+          p5.hidden = true;
+          p6.hidden = true;
         } else if (Value === '2') {
           Preguntas.hidden = false;
           Pregunta1.innerText = 'Facultad a la que pertenece';
+          p1.hidden = false;
           Pregunta2.innerText = 'Nivel de ayudante A o B';
+          p2.hidden = false;
           Pregunta3.innerText = 'Porcentaje de Creditos';
+          p3.hidden = false;
           Pregunta4.innerText = 'Pasante o Titulado';
+          p4.hidden = false;
           Pregunta5.innerText = 'Clase que imparte';
+          p5.hidden = false;
           Pregunta6.innerText = 'Horario de clase';
+          p6.hidden = false;
         } else if (Value === '3') {
           Preguntas.hidden = false;
           Pregunta1.innerText = 'Facultad en la que imparte clase';
+          p1.hidden = false;
           Pregunta2.innerText = 'Nivel de profesor (A, B o C)';
+          p2.hidden = false;
           Pregunta3.innerText = 'Horario de la clase';
+          p3.hidden = false;
           Pregunta4.innerText = 'Clase que imparte';
+          p4.hidden = false;
           Pregunta5.innerText = 'Titulo';
-          Pregunta6.innerText = 'Pregunta6 Profesor';
+          p5.hidden = false;
+          p6.hidden = true;
         } else if (Value === '4') {
           Preguntas.hidden = false;
           Pregunta1.innerText = 'Facultad o instituto al que pertenece';
+          p1.hidden = false;
           Pregunta2.innerText = 'Nivel de investigador(A, B o C)';
+          p2.hidden = false;
           Pregunta3.innerText = 'Nivel de SNI';
-          Pregunta4.innerText = 'Pregunta4 Investigador';
-          Pregunta5.innerText = 'Pregunta5 Investigador';
-          Pregunta6.innerText = 'Pregunta6 Investigador';
+          p3.hidden = false;
+          p4.hidden = true;
+          p5.hidden = true;
+          p6.hidden = true;
         }
       }
-      function Actualizar1() {
-        const value = document.getElementsByClassName('pregunta1');
-        let final = -1;
-        for (let index = 0; index < value.length; index++) {
-          let element = value[index];
-          if (element.value !== '') {
-            final = element.value;
-            break;
-          }
-        }
-        for (let index = 0; index < value.length; index++) {
-          value[index].value = final;
-        }
-      }
-      function Actualizar2() {
-        const value = document.getElementsByClassName('pregunta1');
-        let final = -1;
-        for (let index = 0; index < value.length; index++) {
-          let element = value[index];
-          if (element.value !== '') {
-            final = element.value;
-            break;
-          }
-        }
-        for (let index = 0; index < value.length; index++) {
-          value[index].value = final;
-        }
-      }
-      function Actualizar2() {
-        const value = document.getElementsByClassName('pregunta2');
-        let final = -1;
-        for (let index = 0; index < value.length; index++) {
-          let element = value[index];
-          if (element.value !== '') {
-            final = element.value;
-            break;
-          }
-        }
-        for (let index = 0; index < value.length; index++) {
-          value[index].value = final;
-        }
-      }
-      function Actualizar3() {
-        const value = document.getElementsByClassName('pregunta3');
-        let final = -1;
-        for (let index = 0; index < value.length; index++) {
-          let element = value[index];
-          if (element.value !== '') {
-            final = element.value;
-            break;
-          }
-        }
-        for (let index = 0; index < value.length; index++) {
-          value[index].value = final;
-        }
-      }
-      function Actualizar4() {
-        const value = document.getElementsByClassName('pregunta4');
-        let final = -1;
-        for (let index = 0; index < value.length; index++) {
-          let element = value[index];
-          if (element.value !== '') {
-            final = element.value;
-            break;
-          }
-        }
-        for (let index = 0; index < value.length; index++) {
-          value[index].value = final;
-        }
-      }
-      function Actualizar5() {
-        const value = document.getElementsByClassName('pregunta5');
-        let final = -1;
-        for (let index = 0; index < value.length; index++) {
-          let element = value[index];
-          if (element.value !== '') {
-            final = element.value;
-            break;
-          }
-        }
-        for (let index = 0; index < value.length; index++) {
-          value[index].value = final;
-        }
-      }
-      function Actualizar6() {
-        const value = document.getElementsByClassName('pregunta6');
-        let final = -1;
-        for (let index = 0; index < value.length; index++) {
-          let element = value[index];
-          if (element.value !== '') {
-            final = element.value;
-            break;
-          }
-        }
-        for (let index = 0; index < value.length; index++) {
-          value[index].value = final;
-        }
-      }
+      validarPersonal();
     </script>
   </body>
 </html>
