@@ -50,26 +50,31 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='employee',
             name='CURP',
-            field=models.CharField(max_length=18, validators=[django.core.validators.RegexValidator('^([A-Z][AEIOUX][A-Z]{2}\\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\\d])(\\d)$', message='Formato de CURP incorrecto')]),
+            field=models.CharField(max_length=18, validators=[django.core.validators.RegexValidator(
+                '^([A-Z][AEIOUX][A-Z]{2}\\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\\d])(\\d)$', message='Formato de CURP incorrecto')]),
         ),
         migrations.AlterField(
             model_name='employee',
             name='años_de_antiguedad',
-            field=models.CharField(max_length=2, validators=[django.core.validators.RegexValidator('^\\d{1,10}$', message='Solo numeros para indicar la ANTIGUEDAD')]),
+            field=models.CharField(max_length=2, validators=[django.core.validators.RegexValidator(
+                '^\\d{1,10}$', message='Solo numeros para indicar la ANTIGUEDAD')]),
         ),
         migrations.AlterField(
             model_name='employee',
             name='nombre_completo',
-            field=models.CharField(max_length=100, validators=[django.core.validators.RegexValidator('^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$', message='Solo letras y al menos 4 letras para el NOMBRE COMPLETO')]),
+            field=models.CharField(max_length=100, validators=[django.core.validators.RegexValidator(
+                '^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$', message='Solo letras y al menos 4 letras para el NOMBRE COMPLETO')]),
         ),
         migrations.AlterField(
             model_name='employee',
             name='numero_de_empleado',
-            field=models.CharField(max_length=10, validators=[django.core.validators.RegexValidator('^\\d{1,10}$', message='Solo numeros para el NUMERO DE EMPLEADO')]),
+            field=models.CharField(max_length=10, validators=[django.core.validators.RegexValidator(
+                '^\\d{1,10}$', message='Solo numeros para el NUMERO DE EMPLEADO')]),
         ),
         migrations.AlterField(
             model_name='employee',
             name='sueldo',
-            field=models.CharField(max_length=5, validators=[django.core.validators.RegexValidator('^\\d{1,10}$', message='Solo numeros para el SUELDO')]),
+            field=models.CharField(max_length=5, validators=[django.core.validators.RegexValidator(
+                '^\\d{1,10}$', message='Solo numeros para el SUELDO')]),
         ),
     ]
