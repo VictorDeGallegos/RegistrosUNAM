@@ -10,22 +10,22 @@
 <li>Se puede buscar un empleado por su CURP</li>
   </ul>
 <hr>
-<h2>Requisitos</h2>
+<h2>Requisitos 📄</h2> 
 <hr>
 <p><ul>
   <li>Python3</li>
   <li>Django4</li></ul></p>
-<h2>Ejecutar la aplicación</h2>
+<h2>Ejecutar la aplicación 🚀</h2>
 <hr>
-<p>Ejecute este comando para iniciar el servidor Backend en el directorio [Backend]: [python3 manage.py runserver] (Tienes que ejecutar este comando mientras se encuentra en el entorno virtual)</p>
-<h2>Construido con</h2>
+<p>Ejecute este comando para instalar lo requerimientos necesarios del programa <pre><code>pip install -r requeriments.txt</code></pre> Despues ejecuta las siguientes migraciones <pre><code>Python3 manage.py makemigrations</code></pre> <pre><code>Python3 manage.py migrate</code></pre>  Y por ultimo  iniciar el servidor Backend en el directorio [Backend]: <pre><code>[Python3 manage.py runserver]</code></pre>  (Tienes que ejecutar este comando mientras se encuentra en el entorno virtual "newenv")</p>
+<h2>Construido con 🔨</h2>
 <hr>
 <p><ul>
   <li><a href="https://www.python.org/">Python</a> - Un lenguaje de programación que le permite trabajar rápidamente e integrar sistemas de manera más efectiva..</li>
   <li><a href="https://www.djangoproject.com/">Django</a> - Un Framework de Python de alto nivel que fomenta el desarrollo rápido y el diseño pragmático y limpio.</li>
 </ul></p>
 
-  <h2>Capturas de pantalla de la app en ejecución:</h2>
+  <h2>Capturas de pantalla de la app en ejecución: 📸</h2>
 
 
 <img src='emp1.png'>
