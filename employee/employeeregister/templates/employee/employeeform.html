@@ -93,68 +93,10 @@
     <div class="form-group" id="p1">
       <label id="Pregunta1" for="pregunta1">Pregunta1</label>
       {{form.pregunta1}}
-      <!-- <select name="facultad" id="facultad">
-        <optgroup label="Facultades">
-          <option value="FacultadArquitectura">Facultad de Arquitectura</option>
-          <option value="FacultaArtes">Facultad de Artes y Diseño</option>
-          <option value="FacultadCiencias">Facultad de Ciencias</option>
-          <option value="FacultadPoliticas">Facultad de Ciencias Políticas y Sociales</option>
-          <option value="FacultadAdministracion">Facultad de Contaduría y Administración</option>
-          <option value="FacultadDerecho">Facultad de Derecho</option>
-          <option value="FacultadEconomia">Facultad de Economía</option>
-          <option value="FesAcatlan">Facultad de Estudios Superiores (FES) Acatlán</option>
-          <option value="FesAragon">Facultad de Estudios Superiores (FES) Aragón</option>
-          <option value="FesCuautitlan">Facultad de Estudios Superiores (FES) Cuautitlán</option>
-          <option value="FesIzcala">Facultad de Estudios Superiores (FES) Izcala</option>
-          <option value="FesZaragoza">Facultad de Estudios Superiores (FES) Zaragoza</option>
-          <option value="FacultadFilos">Facultad de Filosofía y Letras</option>
-          <option value="FacultadIngenieria">Facultad de Ingeniería</option>
-          <option value="FacultadMedicina">Facultad de Medicina</option>
-          <option value="FacultadVeterinaria">Facultad de Medicina Veterinaria y Zootecnia</option>
-          <option value="FacultadMusica">Facultad de Música</option>
-          <option value="FacultadOdontologia">Facultad de Odontología</option>
-          <option value="FacultadPsicologia">Facultad de Psicología</option>
-          <option value="FacultadQuimica">Facultad de Química</option>
-        </optgroup>
-        <optgroup label="Escuelas">
-          <option value="TRABAJOSOCIAL">Escuela Nacional de Trabajo Social</option>
-          <option value="ENAC">Escuela Nacional de Artes Cinematográficas (ENAC)</option>
-          <option value="(ENCiT)">Escuela Nacional de Ciencias de la Tierra (ENCiT)</option>
-          <option value="ENEO">Escuela Nacional de Enfermería y Obstetricia (ENEO)</option>
-          <option value="ENESJURIQUILLA">Escuela Nacional de Estudios Superiores Unidad Juriquilla (ENES Juriquilla)</option>
-          <option value="ENESLEON">Escuela Nacional de Estudios Superiores Unidad León (ENES León)</option>
-          <option value="ENESMERIDA">Escuela Nacional de Estudios Superiores Unidad Mérida (ENES Mérida)</option>
-          <option value="ENESMORELIA">Escuela Nacional de Estudios Superiores Unidad Morelia (ENES Morelia)</option>
-          <option value="ENALLT">Escuela Nacional de Lenguas, Lingüística y Traducción (ENALLT)</option>
-        </optgroup>
-        <optgroup label="ENP">
-          <option value="ENP1">Escuela Nacional Preparatoria Plantel 1 "Gabino Barreda"</option>
-          <option value="ENP2">Escuela Nacional Preparatoria Plantel 2 "Erasmo Castellanos Quinto"</option>
-          <option value="ENP3">Escuela Nacional Preparatoria Plantel 3 "Justo Sierra"</option>
-          <option value="ENP4">Escuela Nacional Preparatoria Plantel 4 "Vidal Castañeda y Nájera"</option>
-          <option value="ENP5">Escuela Nacional Preparatoria Plantel 5 "José Vasconcelos"</option>
-          <option value="ENP6">Escuela Nacional Preparatoria Plantel 6 "Antonio Caso"</option>
-          <option value="ENP7">Escuela Nacional Preparatoria Plantel 7 "Ezequiel A. Chávez"</option>
-          <option value="ENP8">Escuela Nacional Preparatoria Plantel 8 "Miguel E. Schulz"</option>
-          <option value="ENP9">Escuela Nacional Preparatoria Plantel 9 "Pedro de Alba"</option>
-        </optgroup>
-        <optgroup label="CCH">
-          <option value="CCHAZCAPOTZALCO">Colegio de Ciencias y Humanidades Plantel Azcapotzalco</option>
-          <option value="CCHNAUCALPAN">Colegio de Ciencias y Humanidades Plantel Naucalpan"</option>
-          <option value="CCHORIENTE">Colegio de Ciencias y Humanidades Plantel Oriente"</option>
-          <option value="CCHSUR">Colegio de Ciencias y Humanidades Plantel Sur"</option>
-          <option value="CCHVALLEJO">Colegio de Ciencias y Humanidades Plantel Vallejo"</option>
-        </optgroup>
-      </select> -->
     </div>
     <div class="form-group" id="p2">
       <label id="Pregunta2" for="pregunta2">Pregunta2</label>
       {{form.pregunta2}}
-      <!-- <select name="nivel" id="nivel">
-        <option value="A">A</option>
-        <option value="B">B</option>
-        <option value="C">C</option>
-      </select> -->
     </div>
     <div class="form-group" id="p3">
       <label id="Pregunta3" for="pregunta3">Pregunta3</label>
@@ -162,7 +104,7 @@
         class="form-control pregunta3 {% if form.pregunta3.errors %} is-invalid {% endif %}"
         type="text"
         name="pregunta3"
-        placeholder="Ejemplo: "
+        placeholder=" "
         maxlength="200"
         value="{% if form.pregunta3.errors %}{{ form.pregunta3.value }}{%else%}{{ employee.pregunta3 }}{%endif%}"
       />
@@ -174,7 +116,7 @@
         class="form-control pregunta4 {% if form.pregunta4.errors %} is-invalid {% endif %}"
         type="text"
         name="pregunta4"
-        placeholder="Ejemplo: "
+        placeholder=" "
         maxlength="200"
         value="{% if form.pregunta4.errors %}{{ form.pregunta4.value }}{%else%}{{ employee.pregunta4 }}{%endif%}"
       />
@@ -186,7 +128,7 @@
         class="form-control pregunta5 {% if form.pregunta5.errors %} is-invalid {% endif %}"
         type="text"
         name="pregunta5"
-        placeholder="Ejemplo: "
+        placeholder=" "
         maxlength="200"
         value="{% if form.pregunta5.errors %}{{ form.pregunta5.value }}{%else%}{{ employee.pregunta5 }}{%endif%}"
       />
@@ -198,7 +140,7 @@
         class="form-control pregunta6 {% if form.pregunta6.errors %} is-invalid {% endif %}"
         type="text"
         name="pregunta6"
-        placeholder="Ejemplo: "
+        placeholder=" "
         maxlength="200"
         value="{% if form.pregunta6.errors %}{{ form.pregunta6.value }}{%else%}{{ employee.pregunta6 }}{%endif%}"
       />

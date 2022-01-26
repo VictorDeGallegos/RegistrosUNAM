@@ -2,24 +2,32 @@
 <h2>App que simula el registro de usuarios de la UNAM desarrollada en Django </h2>
 <hr>
 <ul>
-<li>This is a Employee Registration website,which displays all the registered employees.</li>
-<li>A new employee can register himself using django forms.</li>
-<li>Details of an employee can be updated as well as deleted.</li>
+<li>Este es un sitio web de registro de empleados, que muestra todos los empleados registrados.</li>
+<li>Un administrador puede registrar un nuevo empleado con los formularios de Django</li>
+<li>Los detalles de un empleado se pueden actualizar, así como se eliminan.</li>
+<li>Se puede buscar un empleado por su CURP</li>
   </ul>
 <hr>
-<h2>Requirements</h2>
+<h2>Requisitos</h2>
 <hr>
 <p><ul>
   <li>Python3</li>
   <li>Django4</li></ul></p>
-<h2>Run the application</h2>
+<h2>Ejecutar la aplicación</h2>
 <hr>
-<p>Run this command to start the backend server in the [backend] directory: [python3 manage.py runserver] (You have to run this command while you are sourced into the virtual environment)</p>
-<h2>Built With</h2>
+<p>Ejecute este comando para iniciar el servidor Backend en el directorio [Backend]: [python3 manage.py runserver] (Tienes que ejecutar este comando mientras se encuentra en el entorno virtual)</p>
+<h2>Construido con</h2>
 <hr>
 <p><ul>
-  <li><a href="https://www.python.org/">Python</a> - A programming language that lets you work quickly and integrate systems more effectively.</li>
-  <li><a href="https://www.djangoproject.com/">Django</a> - A high-level Python Web framework that encourages rapid development and clean, pragmatic design.</li>
-
+  <li><a href="https://www.python.org/">Python</a> - Un lenguaje de programación que le permite trabajar rápidamente e integrar sistemas de manera más efectiva..</li>
+  <li><a href="https://www.djangoproject.com/">Django</a> - Un Framework de Python de alto nivel que fomenta el desarrollo rápido y el diseño pragmático y limpio.</li>
 </ul></p>
+
+  <h2>Capturas de pantalla de la app en ejecución:</h2>
+
+
 <img src='emp1.png'>
+<img src='emp2.png'>
+<img src='emp3.png'>
+<img src='emp4.png'>
+<img src='emp5.png'>
