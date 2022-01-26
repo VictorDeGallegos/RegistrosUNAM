@@ -22,7 +22,16 @@
       <td>{{emp.nombre_completo}}</td>
       <td>{{emp.CURP}}</td>
       <td>{{emp.numero_de_empleado}}</td>
-      <td>{{emp.position}}</td>
+      {%if emp.position == '1'%}
+      <td>Administrativo</td>
+      {%endif %} {%if emp.position == '2'%}
+      <td>Ayudante</td>
+      {%endif %} {%if emp.position == '3'%}
+      <td>Profesor</td>
+      {%endif %} {%if emp.position == '4'%}
+      <td>Investigador</td>
+      {%endif %}
+
       <td>
         <a href="{% url 'employee_update' emp.id %}"><i class="fa fa-pencil-square-o edit"></i></a>
         <a href="{% url 'employee_delete' emp.id %}"><i class="fa fa-trash"></i></a>

@@ -30,7 +30,22 @@ class employee(models.Model):
         RegexValidator(r'^\d{1,10}$',
                        message='Solo numeros para indicar la ANTIGUEDAD')])
     email = models.EmailField(max_length=200, unique=True)
-    position = models.ForeignKey(position, on_delete=models.CASCADE)
+    puesto_administrativo = '1'
+    ayudante = '2'
+    profesor = '3'
+    investigador = '4'
+    PUESTOS = [
+        (puesto_administrativo, 'ADMINISTRATIVO'),
+        (ayudante, 'AYUDANTE'),
+        (profesor, 'PROFESOR'),
+        (investigador, 'INVESTIGADOR'),
+    ]
+    position = models.CharField(
+        max_length=20,
+        choices=PUESTOS,
+        default=1,
+    )
+    # position = models.ForeignKey(position, on_delete=models.CASCADE)
     pregunta1 = models.CharField(max_length=200, null=True, blank=True)
     pregunta2 = models.CharField(max_length=200, null=True, blank=True)
     pregunta3 = models.CharField(max_length=200, null=True, blank=True)
