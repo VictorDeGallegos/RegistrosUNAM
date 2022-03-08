@@ -1,6 +1,6 @@
 # Registro de Empleados UNAM 💛
 
-## *Desarrollado por <a href="https://github.com/VictorDeGallegos">Victor Hugo Gallegos Mota</a>   y <a class="text-decoration-none" href="https://github.com/CarlosCruzRangel">Carlos Cruz Rangel </a>*
+## *Desarrollado por <a href="https://github.com/VictorDeGallegos">Victor Gallegos </a>*
 <h2>App que simula el registro de usuarios de la UNAM desarrollada en Django </h2>
 <hr>
 <ul>

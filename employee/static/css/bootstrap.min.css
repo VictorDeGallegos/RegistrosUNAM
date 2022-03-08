@@ -2227,6 +2227,16 @@ fieldset:disabled a.btn {
   background-color: #007bff;
   border-color: #007bff;
 }
+.btn-sesion {
+  color: #fff;
+  background-color: #dea805;
+  border-color: #edb306;
+}
+.btn-sesion:hover {
+  color: #fff;
+  background-color: #f5bb0d;
+  border-color: #f5b905;
+}
 .btn-primary:hover {
   color: #fff;
   background-color: #0069d9;
@@ -3993,7 +4003,7 @@ input[type='submit'].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 0.9rem;
 }
 .card > hr {
   margin-right: 0;
